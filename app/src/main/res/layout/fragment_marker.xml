@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.seungrodotlee.mama.view.marker.MarkerFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/marker_list_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:onClick="@{fragment::toggleOptionPanel}"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/marker_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_black"
+                    android:text="해야할 일들"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:id="@+id/marker_list_option_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:src="@drawable/ic_arrow_drop_down_white_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/marker_list_option_panel_wrap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="앗... 아직 조건에 맞는 일정이 없어요..!" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/marker_list_list_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/marker_list_option_panel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:background="@color/darkGray"
+                    android:fontFamily="@font/noto_sans_black"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="어떤 목록을 보고 싶으세요?"
+                    android:textAlignment="viewStart"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:orientation="horizontal" />
+
+                <Button
+                    android:id="@+id/marker_list_category_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/darkGray"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:onClick="@{fragment::toggleCategorySelectorSection}"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    android:text="다가오는 날들의 목표"
+                    android:textAlignment="viewStart" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/marker_list_category_selector_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/darkGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:background="@color/darkGray"
+                    android:fontFamily="@font/noto_sans_black"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="어떤 프로젝트에서 목록을 가져올까요?"
+                    android:textAlignment="viewStart"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:orientation="horizontal" />
+
+                <Button
+                    android:id="@+id/marker_list_project_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/darkGray"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:onClick="@{fragment::toggleProjectSelectorSection}"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    android:text="프로젝트 없음 (일반 일정)"
+                    android:textAlignment="viewStart" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/marker_list_project_selector_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/darkGray" />
+
+                <LinearLayout
+                    android:id="@+id/marker_list_option_panel_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:onClick="@{fragment::toggleOptionPanel}"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

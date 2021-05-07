@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="안녕하세요!" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/d2coding_bold"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:text="mama"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                android:text=" 에 처음 오셨나요?"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/welcome_not_first_time_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_round_neu"
+                android:fontFamily="@font/noto_sans_black"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:text="아니요" />
+            <Button
+                android:id="@+id/welcome_first_time_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_round_pos"
+                android:fontFamily="@font/noto_sans_black"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="네" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout">
+    <data>
+        <variable
+            name="activity"
+            type="com.seungrodotlee.mama.activity.LoginActivity" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"/>
+    <LinearLayout
+        android:id="@+id/login_input_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/login_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:text="이메일을 입력해주세요" />
+        <EditText
+            android:id="@+id/login_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:inputType="textEmailAddress"
+            android:hint="abc@site.com" />
+        <TextView
+            android:id="@+id/login_pw_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:text="비밀번... 앗! 안 보고 있어요!" />
+        <EditText
+            android:id="@+id/login_pw_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:inputType="textPassword"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/login_error_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            android:textSize="12dp"
+            android:textColor="@color/exlusive"
+            android:text="제대로 입력하셨나요? 다시 확인해주세요." />
+        <Button
+            android:id="@+id/login_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_round_pos"
+            android:fontFamily="@font/noto_sans_black"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:onClick="@{activity::login}"
+            android:text="로그인" />
+        <Button
+            android:id="@+id/login_google_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_round_neu"
+            android:fontFamily="@font/noto_sans_black"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:onClick="@{activity::googleLogin}"
+            android:text="구글로그인" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="12dp"
+            android:text="혹은, 로그인 없이 시작할수도 있어요" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/login_name_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:hint="홍길동" />
+            <Button
+                android:id="@+id/login_start_without_login_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bg_round_neu"
+                android:onClick="@{activity::anonymousLogin}"
+                android:fontFamily="@font/noto_sans_black"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:text="시작하기" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="12dp"
+            android:text="그래도 그것보단..." />
+        <Button
+            android:id="@+id/login_open_registry_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_underscore"
+            android:layout_marginBottom="0dp"
+            android:onClick="@{activity::openRegistry}"
+            android:textSize="12dp"
+            android:text="새로운 아이디와 함께 시작해보세요!"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"/>
+</LinearLayout>
+</layout>

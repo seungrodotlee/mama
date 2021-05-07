@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="fragment"
+            type="com.seungrodotlee.mama.view.calendar.WholeTimelineFragment" />
+    </data>
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/noto_sans_black"
+            android:includeFontPadding="false"
+            android:text="타임라인"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <com.seungrodotlee.mama.element.MamaCalendar
+        android:id="@+id/whole_timeline_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_regular"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="프로젝트" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:text="이 날에는 진행하는 프로젝트가 없어요!" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/whole_timeline_project_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@color/black"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkGray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/noto_sans_regular"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:text="이날의 일정" />
+            <Button
+                android:id="@+id/whole_timeline_new_schedule_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_round_pos"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/noto_sans_black"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:text="추가"
+                android:onClick="@{fragment::openNewTodoDialog}"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:text="이 날에는 따로 정해진 일정이 없어요!" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/whole_timeline_schedule_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@color/black"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkGray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/noto_sans_regular"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:text="이날의 목표" />
+            <Button
+                android:id="@+id/whole_timeline_new_goal_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_round_pos"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/noto_sans_black"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:text="추가"
+                android:onClick="@{fragment::openNewTodoDialog}"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:text="이 날에는 진행하는 프로젝트가 없어요!" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/whole_timeline_goal_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@color/black"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkGray" />
+    </LinearLayout>
+</LinearLayout>
+</layout>

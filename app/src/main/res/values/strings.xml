@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">mama</string>
+    <string name="underlined_text"><u>%s</u></string>
+</resources>

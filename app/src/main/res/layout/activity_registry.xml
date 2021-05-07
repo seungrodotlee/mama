@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registry_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/black"
+    tools:context=".activity.RegistryActivity">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"/>
+    <LinearLayout
+        android:id="@+id/registry_input_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/registry_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="이름을 알려주세요" />
+        <EditText
+            android:id="@+id/registry_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingTop="0dp"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:hint="홍길동" />
+        <TextView
+            android:id="@+id/registry_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="이메일 주소 알려주세요" />
+        <EditText
+            android:id="@+id/registry_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingTop="0dp"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:hint="abc@site.com" />
+        <TextView
+            android:id="@+id/registry_pw_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="비밀번호를 설정해주세요" />
+        <EditText
+            android:id="@+id/registry_pw_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingTop="0dp"
+            android:inputType="textPassword"
+            android:fontFamily="@font/noto_sans_light"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/registry_pw_valid_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="비밀번호를 한번 더 입력해주세요" />
+        <EditText
+            android:id="@+id/registry_pw_valid_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingTop="0dp"
+            android:inputType="textPassword"
+            android:fontFamily="@font/noto_sans_light"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+        <Button
+            android:id="@+id/registry_regist_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_round_pos"
+            android:fontFamily="@font/noto_sans_black"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="시작하기" />
+        <Button
+            android:id="@+id/registry_google_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_round_neu"
+            android:fontFamily="@font/noto_sans_black"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:text="구글계정으로 시작하기" />
+        <Button
+            android:id="@+id/registry_start_without_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_round_neu"
+            android:fontFamily="@font/noto_sans_black"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="계정 없이 시작하기" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"/>
+</LinearLayout>

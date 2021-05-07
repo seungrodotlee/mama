@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@anim/logo_interpolator"
+    android:fillAfter="true">
+    <translate
+        android:fromYDelta="44%p"
+        android:toYDelta="24"
+        android:duration="1500"
+        android:startOffset="1700" />
+</set>

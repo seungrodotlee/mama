@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="activity"
+            type="com.seungrodotlee.mama.view.home.ProjectCreatorActivity"/>
+    </data>
+    <LinearLayout
+        android:id="@+id/project_creator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/black">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+        <LinearLayout
+            android:id="@+id/project_creator_form"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+            android:id="@+id/project_creator_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/noto_sans_light"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="프로젝트 이름을 입력해주세요" />
+            <EditText
+                android:id="@+id/project_creator_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingTop="0dp"
+                android:inputType="text"
+                android:background="@drawable/bg_underscore"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="16dp"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/project_creator_period_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="프로젝트 기간을 설정해주세요" />
+            <Button
+                android:id="@+id/project_creator_open_date_picker_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_underscore"
+                android:includeFontPadding="false"
+                android:minHeight="0dp"
+                android:onClick="@{activity::openDatePicker}"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:textAlignment="viewStart"
+                android:text="2020.03.01 - 2020.04.01" />
+            <TextView
+                android:id="@+id/project_creator_explain_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="프로젝트에 대한 간략한 설명을 적어주세요" />
+            <EditText
+                android:id="@+id/project_creator_explain_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingTop="0dp"
+                android:inputType="text"
+                android:background="@drawable/bg_underscore"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:hint="생각나는 말이 없으시다면 pass!" />
+            <TextView
+                android:id="@+id/project_creator_tag_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="태그를 지정해두면 프로젝트들을\n태그별로 모아를볼 수 있어요 :)" />
+            <EditText
+                android:id="@+id/project_creator_tag_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingTop="0dp"
+                android:inputType="text"
+                android:background="@drawable/bg_underscore"
+                android:fontFamily="@font/noto_sans_light"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:imeOptions="actionNext"
+                android:hint="태그1 (엔터) 태그2 ..." />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/project_creator_tag_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/project_creator_empty_tag_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/noto_sans_regular"
+                android:includeFontPadding="false"
+                android:textSize="12dp"
+                android:text="엄... 아직 태그가 없네요..!"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_round_pos"
+                android:onClick="@{activity::createNewProject}"
+                android:fontFamily="@font/noto_sans_black"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:text="새 프로젝트 시작하기" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+    </LinearLayout>
+</layout>

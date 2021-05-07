@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1048450192260",
+    "firebase_url": "https://dot-mama.firebaseio.com",
+    "project_id": "dot-mama",
+    "storage_bucket": "dot-mama.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048450192260:android:312971fd944a67779743d1",
+        "android_client_info": {
+          "package_name": "com.seungrodotlee.mama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048450192260-uu27uucumi7hic99fi3hq67oc3v0nnea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seungrodotlee.mama",
+            "certificate_hash": "14560847a301014a9bbb176293bbb632049b0292"
+          }
+        },
+        {
+          "client_id": "1048450192260-858t513llckrr8emueeohok28dedns0k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi00DqV3HF0-MqGdUpzewoUGeAktaQARM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048450192260-858t513llckrr8emueeohok28dedns0k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

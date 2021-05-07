@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/switch_mama_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="36dp"
+    android:layout_height="24dp"
+    android:orientation="horizontal"
+    android:background="@drawable/switch_track">
+    <ImageView
+        android:id="@+id/switch_mama_thumb"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_margin="1dp"
+        android:src="@drawable/switch_thumb" />
+</LinearLayout>

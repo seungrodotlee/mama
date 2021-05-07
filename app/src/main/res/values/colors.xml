@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="deepTheme">#1638DF</color>-->
+<!--    <color name="mediumTheme">#546CEA</color>-->
+<!--    <color name="lightTheme">#8B9AEC</color>-->
+<!--    <color name="colorAccent">#41239C</color>-->
+<!--    <color name="exlusive">#E05B2E</color>-->
+    <color name="blue">#576FE8</color>
+    <color name="darkTheme">#374541</color>
+    <color name="highTheme">#085340</color>
+    <color name="deepTheme">#275D4F</color>
+    <color name="mediumTheme">#198B66</color>
+    <color name="lightTheme">#AAE0C3</color>
+    <color name="colorAccent">#41239C</color>
+    <color name="exlusive">#FF492A</color>
+    <color name="white">#F1F0EF</color>
+    <color name="gray">#686868</color>
+    <color name="darkGray">#3A3A3A</color>
+    <color name="black">#262626</color>
+</resources>
